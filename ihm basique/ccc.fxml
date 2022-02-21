@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #FA255E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="179.0" layoutY="143.0" prefHeight="215.0" prefWidth="443.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="code" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="class" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="inherit" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Inherit" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="exception" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Exception" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="enumeration" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Enumeration" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="interfac" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Interface" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font />
+               </font>
+            </Button>
+            <Button fx:id="serverside" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="server side" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Text fx:id="javacontent" fill="WHITE" layoutX="293.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Java Content" textAlignment="CENTER" wrappingWidth="213.33673095703125">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="97.0" fitWidth="98.0" layoutX="688.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Downloads/273857683_500753164843735_27759097031978075_n.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
