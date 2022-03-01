@@ -28,27 +28,27 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="inherit" mnemonicParsing="false" onAction="#clicClass" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Inherit" textFill="WHITE" GridPane.rowIndex="1">
+            <Button fx:id="inherit" mnemonicParsing="false" onAction="#clicInherit" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Inherit" textFill="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="exception" mnemonicParsing="false" onAction="#clicClass" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Exception" textFill="WHITE" GridPane.rowIndex="2">
+            <Button fx:id="exception" mnemonicParsing="false" onAction="#clicException" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Exception" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="enumeration" mnemonicParsing="false" onAction="#clicClass" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Enumeration" textFill="WHITE" GridPane.columnIndex="1">
+            <Button fx:id="enumeration" mnemonicParsing="false" onAction="#clicEnumeration" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Enumeration" textFill="WHITE" GridPane.columnIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="interfac" mnemonicParsing="false" onAction="#clicClass" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Interface" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="interfac" mnemonicParsing="false" onAction="#clicInterfac" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="Interface" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font />
                </font>
             </Button>
-            <Button fx:id="serverside" mnemonicParsing="false" onAction="#clicClass" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="server side" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="serverside" mnemonicParsing="false" onAction="#clicServerSide" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #000000;" text="server side" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
