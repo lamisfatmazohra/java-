@@ -1,16 +1,17 @@
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Personne {
     private StringProperty nom, prenom;
-    private IntegerProperty age;
+    private ObjectProperty<Integer> age;
 
     public Personne(String nom, String prenom, int age) {
         this.nom = new SimpleStringProperty(nom);
         this.prenom = new SimpleStringProperty(prenom);
-        this.age = new SimpleIntegerProperty(age);
+        this.age = new SimpleIntegerProperty(age).asObject();
     }
 
     public String getNom() {
@@ -47,7 +48,7 @@ public class Personne {
         return this.prenom;
     }
 
-    public IntegerProperty getAgProperty() {
+    public ObjectProperty<Integer> getAgeProperty() {
         return this.age;
     }
 }
