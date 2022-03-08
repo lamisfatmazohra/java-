@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableController">
    <children>
       <Text layoutX="289.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="les informations des personnes" wrappingWidth="221.72698974609375">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
+      <TableView fx:id="table" layoutX="217.0" layoutY="97.0" prefHeight="477.0" prefWidth="366.0">
+        <columns>
+          <TableColumn fx:id="nomcol" prefWidth="128.00003051757812" text="nom" />
+          <TableColumn fx:id="prenomcol" prefWidth="118.4000244140625" text="prenom" />
+            <TableColumn fx:id="agecol" prefWidth="116.0" text="age" />
+        </columns>
+      </TableView>
    </children>
 </Pane>
