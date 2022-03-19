@@ -1,3 +1,4 @@
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -7,8 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-public class TableController implements Initializable {
+public class TableController<Button> implements Initializable {
     @FXML
     private TableColumn<Personne, Integer> agecol;
 
@@ -21,6 +23,18 @@ public class TableController implements Initializable {
     @FXML
     private TableView<Personne> table;
     private ObservableList<Personne> personneData;
+
+    @FXML
+    private Button delete;
+
+    @FXML
+    private Button ajouter;
+
+    @FXML
+    private TextField nom;
+
+    @FXML
+    private TextField prenom, age;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -35,4 +49,22 @@ public class TableController implements Initializable {
         this.table.setItems(this.personneData);
     }
 
+    @FXML
+    public void deleteAction() {
+        int index = this.table.getSelectionModel().getSelectedIndex();
+        Personne p = this.table.getSelectionModel().getSelectedItem();
+        this.table.getItems().remove(index);
+    }
+
+    @FXML
+    public void ajouterAction() {
+        String nom = this.nom.getText();
+        String prenom = this.prenom.getText();
+        String age = this.age.getText();
+        Personne p = new Personne(nom, prenom, Integer.valueOf(age));
+        this.table.getItems().add(p);
+        this.nom.setText("");
+        this.prenom.setText("");
+        this.age.setText("");
+    }
 }
