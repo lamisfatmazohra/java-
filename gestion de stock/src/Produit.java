@@ -1,5 +1,6 @@
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -7,8 +8,8 @@ import javafx.beans.property.StringProperty;
 
 public class Produit {
     private StringProperty codebarre, designiation, reference, fournisseur, unite;
-    private IntegerProperty quantite;
-    private DoubleProperty prix;
+    private ObjectProperty<Integer> quantite;
+    private ObjectProperty<Double> prix;
 
     public Produit(String codebarre, String designiation, String reference, String fournisseur, String unite,
             int quantite, double prix) {
@@ -17,8 +18,8 @@ public class Produit {
         this.reference = new SimpleStringProperty(reference);
         this.fournisseur = new SimpleStringProperty(fournisseur);
         this.unite = new SimpleStringProperty(unite);
-        this.quantite = new SimpleIntegerProperty(quantite);
-        this.prix = new SimpleDoubleProperty(prix);
+        this.quantite = new SimpleIntegerProperty(quantite).asObject();
+        this.prix = new SimpleDoubleProperty(prix).asObject();
     }
 
     public String getCodebarre() {
@@ -89,7 +90,7 @@ public class Produit {
         this.quantite.set(quantite);
     }
 
-    public IntegerProperty getquantiteProperty() {
+    public ObjectProperty<Integer> getquantiteProperty() {
         return this.quantite;
     }
 
@@ -101,7 +102,7 @@ public class Produit {
         this.prix.set(prix);
     }
 
-    public DoubleProperty getprixProperty() {
+    public ObjectProperty<Double> getprixProperty() {
         return this.prix;
     }
 

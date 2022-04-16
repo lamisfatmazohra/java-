@@ -94,7 +94,7 @@
          <children>
             <Button fx:id="modifier" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #EC5800;" text="modifier" textFill="WHITE" />
             <Button fx:id="imprimer" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #D2042D;" text="imprimer" textFill="WHITE" GridPane.columnIndex="1" />
-            <Button fx:id="supprimer" mnemonicParsing="false" style="-fx-background-color: #880808;" text="supprimer" textFill="WHITE" GridPane.columnIndex="2" />
+            <Button fx:id="supprimer" mnemonicParsing="false" onAction="#supprimerProduit" style="-fx-background-color: #880808;" text="supprimer" textFill="WHITE" GridPane.columnIndex="2" />
          </children>
       </GridPane>
       <Separator layoutX="318.0" layoutY="346.0" prefHeight="3.0" prefWidth="281.0" style="-fx-background-color: #ffffff;" />

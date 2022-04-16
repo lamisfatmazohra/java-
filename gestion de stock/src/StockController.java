@@ -1,6 +1,7 @@
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -83,7 +84,17 @@ public class StockController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
         this.produits = FXCollections.observableArrayList();
+        this.getProduit();
+        codebarre.setCellValueFactory(cellData -> cellData.getValue().getcodeProperty());
+        reference.setCellValueFactory(cellData -> cellData.getValue().getreferenceProperty());
+        fournisseur.setCellValueFactory(cellData -> cellData.getValue().getfournaisseurProperty());
+        designation.setCellValueFactory(cellData -> cellData.getValue().getDesigniationProperty());
+        unite.setCellValueFactory(cellData -> cellData.getValue().getuniteProperty());
+        prix.setCellValueFactory(cellData -> cellData.getValue().getprixProperty());
+        quantite.setCellValueFactory(cellData -> cellData.getValue().getquantiteProperty());
+        tableau.setItems(produits);
 
     }
 
@@ -121,6 +132,53 @@ public class StockController implements Initializable {
         a.setContentText("le produit est inserer");
         a.show();
 
+    }
+
+    @FXML
+    public void supprimerProduit() {
+        Produit p = tableau.getSelectionModel().getSelectedItem();
+        int index = tableau.getSelectionModel().getSelectedIndex();
+        final Connection connection;
+        DBHundler hundler = new DBHundler();
+        PreparedStatement pst;
+        String delete = "delete from produit where codebarr=?";
+        connection = (Connection) hundler.getConnection();
+        try {
+            pst = (PreparedStatement) connection.prepareStatement(delete);
+            pst.setString(1, p.getCodebarre());
+            pst.executeUpdate();
+            this.tableau.getItems().remove(index);
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("le produit est supprimer");
+            a.show();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void getProduit() {
+        final Connection connection;
+        DBHundler hundler = new DBHundler();
+        PreparedStatement pst;
+        String select = "select * from produit";
+        connection = (Connection) hundler.getConnection();
+        try {
+            pst = (PreparedStatement) connection.prepareStatement(select);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                String codebarr = rs.getString("codebarr");
+                String reference = rs.getString("reference");
+                String unite = rs.getString("unite");
+                String designiation = rs.getString("designiation");
+                String fournisseur = rs.getString("fournaisseur");
+                int quantite = rs.getInt("quantite");
+                Double prix = rs.getDouble("prix");
+                produits.add(new Produit(codebarr, designiation, reference, fournisseur, unite, quantite, prix));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }
