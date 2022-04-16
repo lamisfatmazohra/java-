@@ -6,16 +6,16 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Produit {
-    private StringProperty codebarre, designiation, reference, fournaisseur, unite;
+    private StringProperty codebarre, designiation, reference, fournisseur, unite;
     private IntegerProperty quantite;
     private DoubleProperty prix;
 
-    public Produit(String codebarre, String designiation, String reference, String fournaisseur, String unite,
+    public Produit(String codebarre, String designiation, String reference, String fournisseur, String unite,
             int quantite, double prix) {
         this.codebarre = new SimpleStringProperty(codebarre);
         this.designiation = new SimpleStringProperty(designiation);
         this.reference = new SimpleStringProperty(reference);
-        this.fournaisseur = new SimpleStringProperty(fournaisseur);
+        this.fournisseur = new SimpleStringProperty(fournisseur);
         this.unite = new SimpleStringProperty(unite);
         this.quantite = new SimpleIntegerProperty(quantite);
         this.prix = new SimpleDoubleProperty(prix);
@@ -58,15 +58,15 @@ public class Produit {
     }
 
     public String getFournaisseur() {
-        return this.fournaisseur.get();
+        return this.fournisseur.get();
     }
 
     public void setFournaisseur(String fournaisseur) {
-        this.fournaisseur.set(fournaisseur);
+        this.fournisseur.set(fournaisseur);
     }
 
     public StringProperty getfournaisseurProperty() {
-        return this.fournaisseur;
+        return this.fournisseur;
     }
 
     public String getUnite() {

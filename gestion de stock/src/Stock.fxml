@@ -41,7 +41,7 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="ajouter" mnemonicParsing="false" style="-fx-background-color: #0C1D5F;" text="ajouter" textFill="WHITE" GridPane.rowIndex="2" />
+            <Button fx:id="ajouter" mnemonicParsing="false" onAction="#ajouterProduit" style="-fx-background-color: #0C1D5F;" text="ajouter" textFill="WHITE" GridPane.rowIndex="2" />
             <GridPane prefHeight="224.0" prefWidth="286.0" GridPane.rowIndex="1">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.00003560384113" minWidth="10.0" prefWidth="152.0000254313151" />
