@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StockController">
+   <children>
+      <TableView fx:id="tableau" layoutX="5.0" layoutY="88.0" prefHeight="200.0" prefWidth="591.0">
+        <columns>
+          <TableColumn fx:id="codebarre" prefWidth="85.33334589004517" text="code barre" />
+          <TableColumn fx:id="reference" prefWidth="115.99999237060547" text="reference" />
+            <TableColumn fx:id="designation" prefWidth="108.00001525878906" text="designation" />
+            <TableColumn fx:id="fournisseur" prefWidth="102.6666259765625" text="founisseur" />
+            <TableColumn fx:id="quantite" prefWidth="58.0" text="Quantite" />
+            <TableColumn fx:id="unite" prefWidth="37.999969482421875" text="unite" />
+            <TableColumn fx:id="prix" prefWidth="85.99996948242188" text="prix" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="14.0" layoutY="301.0" prefHeight="318.0" prefWidth="281.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="57.666656494140625" minHeight="10.0" prefHeight="43.666646321614586" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="233.3333536783854" minHeight="10.0" prefHeight="230.66668701171872" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="42.33331298828125" minHeight="10.0" prefHeight="29.999979654947936" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter produit" wrappingWidth="162.71484375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="ajouter" mnemonicParsing="false" style="-fx-background-color: #0C1D5F;" text="ajouter" textFill="WHITE" GridPane.rowIndex="2" />
+            <GridPane prefHeight="224.0" prefWidth="286.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.00003560384113" minWidth="10.0" prefWidth="152.0000254313151" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.9999745686849" minWidth="10.0" prefWidth="175.9999745686849" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="code barre" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="reference" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="designation" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="fournisseur" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite" GridPane.rowIndex="4" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="unite" GridPane.rowIndex="5" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="prix" GridPane.rowIndex="6" />
+                  <TextField fx:id="codebarre1" GridPane.columnIndex="1" />
+                  <TextField fx:id="reference1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="designation1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="fournisseur1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="quantite1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="unite1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="prix1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <Text layoutX="176.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de stock">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Separator layoutY="299.0" prefHeight="0.0" prefWidth="606.0" style="-fx-background-color: #ffffff;" />
+      <Separator layoutX="308.0" layoutY="300.0" orientation="VERTICAL" prefHeight="346.0" prefWidth="20.0" style="-fx-background-color: #ffffff;" />
+      <GridPane layoutX="328.0" layoutY="313.0" prefHeight="25.0" prefWidth="264.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="modifier" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #EC5800;" text="modifier" textFill="WHITE" />
+            <Button fx:id="imprimer" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #D2042D;" text="imprimer" textFill="WHITE" GridPane.columnIndex="1" />
+            <Button fx:id="supprimer" mnemonicParsing="false" style="-fx-background-color: #880808;" text="supprimer" textFill="WHITE" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <Separator layoutX="318.0" layoutY="346.0" prefHeight="3.0" prefWidth="281.0" style="-fx-background-color: #ffffff;" />
+      <TextArea fx:id="inventaire" layoutX="327.0" layoutY="385.0" prefHeight="234.0" prefWidth="264.0" />
+      <Text layoutX="327.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventaire" wrappingWidth="162.71484375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detail produit" wrappingWidth="162.71484375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
