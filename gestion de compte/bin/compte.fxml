@@ -12,16 +12,16 @@
 <?import javafx.scene.text.Text?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CompteController">
    <children>
       <TableView layoutX="75.0" layoutY="108.0" prefHeight="261.0" prefWidth="650.0">
         <columns>
-          <TableColumn prefWidth="91.20001220703125" text="nom" />
-          <TableColumn prefWidth="92.0" text="prenom" />
-            <TableColumn prefWidth="116.00006103515625" text="date de naissance" />
-            <TableColumn prefWidth="121.5999755859375" text="adresse" />
-            <TableColumn prefWidth="113.60003662109375" text="solde" />
-            <TableColumn prefWidth="111.2000732421875" text="numero" />
+          <TableColumn fx:id="nomT" prefWidth="91.20001220703125" text="nom" />
+          <TableColumn fx:id="prenomT" prefWidth="92.0" text="prenom" />
+            <TableColumn fx:id="dateT" prefWidth="116.00006103515625" text="date de naissance" />
+            <TableColumn fx:id="adresseT" prefWidth="121.5999755859375" text="adresse" />
+            <TableColumn fx:id="soldeT" prefWidth="113.60003662109375" text="solde" />
+            <TableColumn fx:id="numeroT" prefWidth="111.2000732421875" text="numero" />
         </columns>
       </TableView>
       <GridPane layoutX="46.0" layoutY="422.0" prefHeight="161.0" prefWidth="253.0">
@@ -36,10 +36,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="nomF" GridPane.columnIndex="1" />
+            <TextField fx:id="prenomF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="dateF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="adresseF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="prenom" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date de naissance" GridPane.rowIndex="2" />
@@ -51,7 +51,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button layoutX="146.0" layoutY="594.0" mnemonicParsing="false" style="-fx-background-color: #0C1D5F;" text="ajouter" textFill="WHITE" />
+      <Button fx:id="ajouter" layoutX="146.0" layoutY="594.0" mnemonicParsing="false" style="-fx-background-color: #0C1D5F;" text="ajouter" textFill="WHITE" />
       <GridPane layoutX="392.0" layoutY="451.0" prefHeight="103.0" prefWidth="314.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.4000244140625" minWidth="10.0" prefWidth="102.4000244140625" />
@@ -65,10 +65,10 @@
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" somme de depot" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="somme de retrait" GridPane.rowIndex="1" />
-            <TextField prefWidth="100.0" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #006400;" text="depot" textFill="WHITE" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #FFD800;" text="retrait" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="depotF" prefWidth="100.0" GridPane.columnIndex="1" />
+            <TextField fx:id="retraitF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="depot" mnemonicParsing="false" style="-fx-background-color: #006400;" text="depot" textFill="WHITE" GridPane.columnIndex="2" />
+            <Button fx:id="retrait" mnemonicParsing="false" style="-fx-background-color: #FFD800;" text="retrait" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <Text layoutX="468.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="transaction bancaire">
